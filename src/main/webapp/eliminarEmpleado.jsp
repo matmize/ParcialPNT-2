@@ -20,7 +20,7 @@
         int id = Math.abs(Integer.parseInt(request.getParameter("id")));
 
    
-        if (unico.buscarEmpleado(id).idEmpleado != -100) {
+        if (unico.buscarEmpleado(id).getIdEmpleado() != -100) {
             unico.eliminarEmpleado(id);%>
 
             <p>Se elimino correctamente el empleado</p>
