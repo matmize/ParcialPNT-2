@@ -55,7 +55,7 @@ public class Unico{
 
     public void eliminarEmpleado(int id){
         for (int i =0; i< empleados.size();i++){
-            if (empleados.get(i).idEmpleado == id){
+            if (empleados.get(i).getIdEmpleado() == id){
                 empleados.remove(i);
                 if (asignaciones.size()>0){
                     int j = 0;
@@ -89,8 +89,8 @@ public class Unico{
     public void editarEmpleado(int idEmpleado,int cc, String nombre,String formacionAca, String habilidades){
         for (int i =0; i<empleados.size();i++){
             if (idEmpleado == empleados.get(i).getIdEmpleado()){
-                empleados.get(i).nombreEmpleado = nombre;
-                empleados.get(i).habilidades = habilidades;
+                empleados.get(i).getNombreEmpleado = nombre;
+                empleados.get(i).getHabilidades = habilidades;
             }
         }
 
