@@ -86,8 +86,16 @@ public class Unico{
         }
     }
 
-    public void editarEmpleado(int idEmpleado,int cc, String nombre,String formacionAca, String habilidades){
-        
+    public void editarEmpleado(int idEmpleado,int cc1, String nombre1,String formacionAca1, String habilidades1){
+        for (int i = 0; i<empleados.size();i++){
+            if (idEmpleado == empleados.get(i).getIdEmpleado()){
+                Empleado copia = empleados.get(i);
+                copia.setCc(cc1);
+                copia.setNombreEmpleado(nombre1);
+                copia.setFormacionAca(formacionAca1);
+                copia.setHabilidades(habilidades1);
+            }
+        }
 
     }
 
