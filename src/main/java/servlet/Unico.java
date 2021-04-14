@@ -26,11 +26,11 @@ public class Unico{
     }
 
 
-    public void crearEmpleado (int id, String nombre, String habilidades){
-        Empleado empleado = new Empleado (id, nombre, habilidades);
+    public void crearEmpleado (int idEmpleado,int cc, String nombre,String formacionAca, String habilidades){
+        Empleado empleado = new Empleado (idEmpleado,cc,nombre,formacionAca, habilidades);
         empleados.add(empleado);
     }
-    public Empleado buscarEmpleado (int id){
+    public Empleado buscarEmpleado (int idEmpleado){
         if (empleados.size()>0){
             int count = 0;
             int locate = 0;
@@ -44,11 +44,11 @@ public class Unico{
             if (count == 1 ){
                 return empleados.get(locate);
             }else{
-                Empleado empleado = new Empleado (-100,"-","-");
+                Empleado empleado = new Empleado (-100,0,"-","-","-");
                 return empleado;
             }
         }else{
-            Empleado empleado = new Empleado (-100,"-","-");
+            Empleado empleado = new Empleado (-100,0,"-","-","-");
             return empleado;
         }
     }
@@ -86,7 +86,7 @@ public class Unico{
         }
     }
 
-    public void editarEmpleado(int id, String nombre, String habilidades){
+    public void editarEmpleado(int idEmpleado,int cc, String nombre,String formacionAca, String habilidades){
         for (int i =0; i<empleados.size();i++){
             if (id == empleados.get(i).idEmpleado){
                 empleados.get(i).nombreEmpleado = nombre;
