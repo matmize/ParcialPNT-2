@@ -32,7 +32,7 @@ public class crearProyecto extends HttpServlet {
         String rpta1 = "Se ha creado un producto con el codigo" + idProyecto;
 
         if (unico.buscarProyecto(idProyecto).getIdProyecto() == -100){
-            unico.crearProducto(idProyecto,nombreC, presupuesto, tiempo);
+            unico.crearProyecto(idProyecto,nombreC,presupuesto,tiempo);
             out = resp.getOutputStream();
             out.write(rpta1.getBytes());
 
