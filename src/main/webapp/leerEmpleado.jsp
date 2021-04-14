@@ -20,9 +20,10 @@
                 <p>No existe el empleado con ID<%= Integer.parseInt(request.getParameter("id"))%></p>
             <%}else{%>
                 <Table>
-                    <tr><td><Strong>ID Empleado : </Strong></td> <tr><td><Strong><%= unico.buscarEmpleado(id).idEmpleado%> </Strong></td>
-                    <tr><td><Strong>Nombre Empleado : </Strong></td><tr><td><Strong><%= unico.buscarEmpleado(id).nombreEmpleado%> </Strong></td>
-                    <tr><td><Strong>Habilidad Empleado : </Strong></td><tr><td><Strong><%= unico.buscarEmpleado(id).habilidades%> </Strong></td>
+                    <tr><td><Strong>ID Empleado : </Strong></td> <tr><td><Strong><%= unico.buscarEmpleado(id).getIdEmpleado%> </Strong></td>
+                    <tr><td><Strong>Cedula Ciudadania : </Strong></td> <tr><td><Strong><%= unico.buscarEmpleado(id).getCc%> </Strong></td>
+                    <tr><td><Strong>Nombre Empleado : </Strong></td><tr><td><Strong><%= unico.buscarEmpleado(id).getNombreEmpleado%> </Strong></td>
+                    <tr><td><Strong>Habilidad Empleado : </Strong></td><tr><td><Strong><%= unico.buscarEmpleado(id).getHabilidades%> </Strong></td>
                     
 
 
