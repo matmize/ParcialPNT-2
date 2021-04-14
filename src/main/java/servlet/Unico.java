@@ -99,8 +99,8 @@ public class Unico{
 
     }
 
-    public void crearProyecto (int id, String empresa,int presupuesto,String tiempo){
-        Proyecto proyecto = new Proyecto (id,empresa,presupuesto,tiempo);
+    public void crearProyecto (int idProyecto, String nombreC,int presupuesto,String tiempo){
+        Proyecto proyecto = new Proyecto (idProyecto,nombreC,presupuesto,tiempo);
         proyectos.add(proyecto);
     }
     public Proyecto buscarProyecto (int id ){
@@ -109,7 +109,7 @@ public class Unico{
             int locate = 0;
 
             for  (int i = 0; i < proyectos.size();i++){
-                if (id == proyectos.get(i).idProyecto){
+                if (idProyecto == proyectos.get(i).getIdProyecto()){
                     count++;
                     locate = i;
                 }
@@ -126,9 +126,9 @@ public class Unico{
         }
     }
 
-    public void eliminarProyecto (int id){
+    public void eliminarProyecto (int idProyecto){
         for (int i =0; i< proyectos.size();i++){
-            if (proyectos.get(i).idProyecto == id){
+            if (proyectos.get(i).getIdProyecto() == idProyecto){
                 proyectos.remove(i);
             } else{
                 Proyecto proyecto = new Proyecto (-100,"-",0,"-");
@@ -137,12 +137,14 @@ public class Unico{
 
 
     }
-    public void editarProyecto (int idProyecto, String empresa,int presupuesto,String tiempo){
-         for (int i =0; i<proyectos.size();i++){
-            if (idProyecto== proyectos.get(i).idProyecto){
-                proyectos.get(i).empresa = empresa;
-                proyectos.get(i).presupuesto = presupuesto;
-                proyectos.get(i).tiempo = tiempo;
+    public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
+         for (int i = 0; i<empleados.size();i++){
+            if (idProyecto == proyectos.get(i).getIdProyecto()){
+                Proyecto copia = proyectos.get(i);
+                copia.setNombreC(nombreC1);
+                copia.setPresupuesto(presupuesto1);
+                copia.setTiempo(tiempo1);
+  
             }
         }
 

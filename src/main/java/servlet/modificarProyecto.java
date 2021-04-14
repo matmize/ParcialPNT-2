@@ -10,29 +10,29 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.Math;
 
 @WebServlet(
-    name = "crearProyecto",
-    urlPatterns = {"/crearP"}
+    name = "modificarProyecto",
+    urlPatterns = {"/modificarP"}
 )
 
-public class crearProyecto extends HttpServlet {
+public class modificarProyecto extends HttpServlet {
     @Override
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 
         Unico unico = Unico.getInstance();
 
-        int idProyecto = Integer.parseInt(req.getParameter("idP"));
-        String nombreC = req.getParameter("nombreC");
-        String presupuesto = req.getParameter("presupuesto");
-        int tiempo = Integer.parseInt(req.getParameter("tiempo"));
-        
+        int idProyecto= Integer.parseInt(req.getParameter("idProyecto"));
+        String nombreC1 = req.getParameter("nombreC1");
+        int presupuesto1 = Integer.parseInt(req.getParameter("presupuesto1"));
+        String tiempo1 = req.getParameter("tiempo1");
+
+        String rpta = "No existe un producto con el codigo " + idProyecto;
+        String rpta1 = "Se ha editado el producto con el codigo" + idProyecto;
         ServletOutputStream out;
 
-        String rpta = "ya existe un Proyecto con el codigo " + idProyecto;
-        String rpta1 = "Se ha creado un producto con el codigo" + idProyecto;
 
-        if (unico.buscarProyecto(idProyecto).getIdProyecto() == -100){
-            unico.crearProducto(idProyecto,nombreC, presupuesto, tiempo);
+        if (unico.buscarProyecto(idProyecto).getIdProyecto() != -100){
+            unico.editarProyecto(idProyecto,nombreC1,presupuesto1, tiempo1);
             out = resp.getOutputStream();
             out.write(rpta1.getBytes());
 
@@ -42,10 +42,14 @@ public class crearProyecto extends HttpServlet {
             out = resp.getOutputStream();
             out.write(rpta.getBytes());
 
-            
+           
         }
+
         
         out.flush();
         out.close();
+
     }
+
+
 }

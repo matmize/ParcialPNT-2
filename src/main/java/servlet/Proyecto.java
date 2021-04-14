@@ -2,15 +2,15 @@ package servlet;
 
 public class Proyecto{
 	
-	public int idProyecto;
-	public String empresa;
-	public int presupuesto;
-	public String tiempo;
+    private int idProyecto;
+    private String nombreC;
+    private int presupuesto;
+    private String tiempo;
 
-	public Proyecto (int idProyecto, String empresa, int presupuesto, String tiempo) {
+	public Proyecto (int idProyecto, String nombreC, int presupuesto, String tiempo) {
 
 		this.idProyecto = idProyecto;
-		this.empresa = empresa;
+		this.nombreC = nombreC;
 		this.presupuesto = presupuesto;
 		this.tiempo = tiempo;
 	}
@@ -23,12 +23,12 @@ public class Proyecto{
         this.idProyecto = idProyecto;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getNombreC() {
+        return nombreC;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setNombreC(String nombreC) {
+        this.nombreC = nombreC;
     }
 
     public int getPresupuesto() {
