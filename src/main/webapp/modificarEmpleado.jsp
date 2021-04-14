@@ -12,16 +12,16 @@
    <%
         Unico unico = Unico.getInstance();
 
-        int id = Math.abs(Integer.parseInt(request.getParameter("id")));
-        int cc = Math.abs(Integer.parseInt(request.getParameter("cc1")));
-        String nombre = request.getParameter("nombre1");
-        String formacion = request.getParameter("formacionAca1");
-        String habilidad = request.getParameter("habilidad1");
+        int idEmpleado = Math.abs(Integer.parseInt(request.getParameter("id")));
+        int cc1 = Math.abs(Integer.parseInt(request.getParameter("cc1")));
+        String nombre1 = request.getParameter("nombre1");
+        String formacionAca1 = request.getParameter("formacionAca1");
+        String habilidades1 = request.getParameter("habilidades1");
         
 
-        if (unico.buscarEmpleado(id).getIdEmpleado() == -100){
+        if (unico.buscarEmpleado(id).getIdEmpleado() != -100){
            
-            unico.editarEmpleado(id,cc,nombre,formacion,habilidad);
+            unico.editarEmpleado(idEmpleado,cc1,nombre1,formacionAca1,habilidades1);
 
         }
     
