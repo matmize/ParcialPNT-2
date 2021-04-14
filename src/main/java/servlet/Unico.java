@@ -36,7 +36,7 @@ public class Unico{
             int locate = 0;
 
             for  (int i = 0; i < empleados.size();i++){
-                if (id == empleados.get(i).idEmpleado){
+                if (idEmpleado == empleados.get(i).getIdEmpleado()){
                     count++;
                     locate = i;
                 }
@@ -88,7 +88,7 @@ public class Unico{
 
     public void editarEmpleado(int idEmpleado,int cc, String nombre,String formacionAca, String habilidades){
         for (int i =0; i<empleados.size();i++){
-            if (id == empleados.get(i).idEmpleado){
+            if (idEmpleado == empleados.get(i).getIdEmpleado()){
                 empleados.get(i).nombreEmpleado = nombre;
                 empleados.get(i).habilidades = habilidades;
             }
