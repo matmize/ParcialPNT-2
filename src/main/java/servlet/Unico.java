@@ -103,7 +103,7 @@ public class Unico{
         Proyecto proyecto = new Proyecto (idProyecto,nombreC,presupuesto,tiempo);
         proyectos.add(proyecto);
     }
-    public Proyecto buscarProyecto (int id ){
+    public Proyecto buscarProyecto (int idProyecto ){
         if (proyectos.size()>0){
             int count = 0;
             int locate = 0;

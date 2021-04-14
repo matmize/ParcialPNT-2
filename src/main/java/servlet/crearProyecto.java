@@ -23,8 +23,8 @@ public class crearProyecto extends HttpServlet {
 
         int idProyecto = Integer.parseInt(req.getParameter("idP"));
         String nombreC = req.getParameter("nombreC");
-        String presupuesto = req.getParameter("presupuesto");
-        int tiempo = Integer.parseInt(req.getParameter("tiempo"));
+        int presupuesto = Integer.parseInt(req.getParameter("presupuesto"));
+        String tiempo = req.getParameter("tiempo");
         
         ServletOutputStream out;
 
