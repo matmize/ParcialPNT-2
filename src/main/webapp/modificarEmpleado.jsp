@@ -19,7 +19,7 @@
         String habilidades1 = request.getParameter("habilidades1");
         
 
-        if (unico.buscarEmpleado(id).getIdEmpleado() != -100){
+        if (unico.buscarEmpleado(idEmpleado).getIdEmpleado() != -100){
            
             unico.editarEmpleado(idEmpleado,cc1,nombre1,formacionAca1,habilidades1);
 
