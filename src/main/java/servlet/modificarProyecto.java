@@ -32,7 +32,7 @@ public class modificarProyecto extends HttpServlet {
 
 
         if (unico.buscarProyecto(idProyecto).getIdProyecto() != -100){
-            unico.editarProyecto(idProyecto,nombreC1,presupuesto1, tiempo1);
+            unico.editarProyecto(idProyecto,nombreC1,presupuesto1,tiempo1);
             out = resp.getOutputStream();
             out.write(rpta1.getBytes());
 

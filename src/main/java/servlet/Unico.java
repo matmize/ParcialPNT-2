@@ -138,7 +138,7 @@ public class Unico{
 
     }
     public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
-         for (int i = 0; i<empleados.size();i++){
+         for (int i = 0; i<proyectos.size();i++){
             if (idProyecto == proyectos.get(i).getIdProyecto()){
                 Proyecto copia = proyectos.get(i);
                 copia.setNombreC(nombreC1);
