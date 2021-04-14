@@ -53,7 +53,7 @@ public class Unico{
         }
     }
 
-    public void eliminarEmpleado(int id){
+    public void eliminarEmpleado(int idEmpleado){
         for (int i =0; i< empleados.size();i++){
             if (empleados.get(i).getIdEmpleado() == idEmpleado){
                 empleados.remove(i);
