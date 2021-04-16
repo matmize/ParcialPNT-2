@@ -8,20 +8,14 @@ public class Requerimiento {
     private String actividades;
     private String tiempoR;
 
-    public Requerimiento(int codigoR,int codigoP, String descripcion, String actividades, String tiempoR) {
+   
+
+    public Requerimiento(int codigoR, int codigoP, String descripcion, String actividades, String tiempoR) {
         this.codigoR = codigoR;
         this.codigoP = codigoP;
         this.descripcion = descripcion;
         this.actividades = actividades;
         this.tiempoR = tiempoR;
-    }
-
-    public int getCodigoP() {
-        return codigoP;
-    }
-
-    public void setCodigoP(int codigoP) {
-        this.codigoP = codigoP;
     }
 
     public int getCodigoR() {
@@ -30,6 +24,14 @@ public class Requerimiento {
 
     public void setCodigoR(int codigoR) {
         this.codigoR = codigoR;
+    }
+
+    public int getCodigoP() {
+        return codigoP;
+    }
+
+    public void setCodigoP(int codigoP) {
+        this.codigoP = codigoP;
     }
 
     public String getDescripcion() {
@@ -55,8 +57,6 @@ public class Requerimiento {
     public void setTiempoR(String tiempoR) {
         this.tiempoR = tiempoR;
     }
-    
-    
     
     
     

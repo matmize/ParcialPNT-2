@@ -208,13 +208,13 @@ public class Unico{
         requerimientos.add(requerimiento);
     }
 
-    public Requerimiento buscarRequerimiento (int codigoR){
+    public Requerimiento buscarRequerimiento (int codigoR ){
          if (requerimientos.size()>0){
             int count = 0;
             int locate = 0;
 
             for (int i = 0; i < requerimientos.size();i++){
-                if (codigoR== requerimientos.get(i).codigoR()){
+                if (codigoR == requerimientos.get(i).getCodigoR()){
                     count++;
                     locate = i;
                 }
@@ -235,7 +235,7 @@ public class Unico{
     }
     public void eliminarRequerimiento (int codigoR, int codigoP, String descripcion, String actividades, String tiempoR){
          for (int i =0; i< requerimientos.size();i++){
-            if (requerimientos.get(i).codigoR() == codigoR){
+            if (requerimientos.get(i).getCodigoR() == codigoR){
                 requerimientos.remove(i);
             } else{
                 Requerimiento requerimiento= new Requerimiento (-100,0,"-","-","-");
@@ -251,7 +251,7 @@ public class Unico{
                 copia.setCodigoP(codigoP1);
                 copia.setDescripcion(descripcion1);
                 copia.setActividades(actividades1);
-                copia.setTiempo(tiempoR1);
+                copia.setTiempoR(tiempoR1);
                
   
             }
