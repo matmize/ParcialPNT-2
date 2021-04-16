@@ -8,6 +8,7 @@ public class Unico{
 
     private static Unico unico= null;
     private static Unico INSTANCE = null;
+    private ArrayList<Requerimiento>requerimientos= new ArrayList<Requerimiento>();
     private ArrayList<Empleado>empleados = new ArrayList();
     private ArrayList<Proyecto>proyectos = new ArrayList();
     private ArrayList<Asignacion>asignaciones = new ArrayList();
@@ -197,6 +198,62 @@ public class Unico{
                 asignaciones.get(i).idemp = idEmpleado;
                 asignaciones.get(i).horas = horas;
                 asignaciones.get(i).responsabilidades = responsabilidades;
+            }
+        }
+
+    }
+
+     public void crearRequerimiento (int codigoR, int codigoP, String descripcion, String actividades, String tiempoR){
+        Requerimiento requerimiento = new Requerimiento(codigoR,codigoP,descripcion,actividades, tiempoR);
+        requerimientos.add(requerimiento);
+    }
+
+    public Requerimiento buscarRequerimiento (int codigoR){
+         if (requerimientos.size()>0){
+            int count = 0;
+            int locate = 0;
+
+            for (int i = 0; i < requerimientos.size();i++){
+                if (codigoR== requerimientos.get(i).codigoR()){
+                    count++;
+                    locate = i;
+                }
+            }
+            if (count == 1 ){
+                return requerimientos.get(locate);
+            }else{
+
+
+                Requerimiento requerimiento = new Requerimiento (-100,0,"-","-","-");
+                return requerimiento;
+            }
+        }else{
+           Requerimiento requerimiento= new Requerimiento (-100,0,"-","-","-");
+            return requerimiento;
+        }
+
+    }
+    public void eliminarRequerimiento (int codigoR, int codigoP, String descripcion, String actividades, String tiempoR){
+         for (int i =0; i< requerimientos.size();i++){
+            if (requerimientos.get(i).codigoR() == codigoR){
+                requerimientos.remove(i);
+            } else{
+                Requerimiento requerimiento= new Requerimiento (-100,0,"-","-","-");
+            }
+        }
+    }
+
+    public void editarAsignacion (int codigoR, int codigoP1, String descripcion1, String actividades1, String tiempoR1){
+         for (int i = 0; i<requerimientos.size();i++){
+            if (codigoR == requerimientos.get(i).getCodigoR()){
+                Requerimiento copia = requerimientos.get(i);
+
+                copia.setCodigoP(codigoP1);
+                copia.setDescripcion(descripcion1);
+                copia.setActividades(actividades1);
+                copia.setTiempo(tiempoR1);
+               
+  
             }
         }
 
