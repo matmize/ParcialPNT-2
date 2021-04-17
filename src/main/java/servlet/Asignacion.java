@@ -6,8 +6,8 @@ public class Asignacion {
 	private String responsabilidades;
 
 	public Asignacion( int idProy,String idemp, String responsabilidades){
-		this.idProy= idProyecto;
-        this.idemp = idEmpleado;
+		this.idProy= idProy;
+        this.idemp = idemp;
 		this.responsabilidades = responsabilidades;
 	}
 
