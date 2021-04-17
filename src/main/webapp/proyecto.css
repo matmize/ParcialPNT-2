@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://media.istockphoto.com/photos/standard-quality-control-certification-assurance-concept-picture-id1282633951?s=612x612");
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg");
      background-color: white;
     }
     h1{
@@ -40,5 +40,7 @@ body{
         color:white;
     }
     a{
-        color:red;
+        color:black;
     }
+    
+    
