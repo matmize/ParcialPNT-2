@@ -41,7 +41,7 @@ public class crearRequerimiento extends HttpServlet {
             }else{
 
                 out = resp.getOutputStream();
-                out.write(rpta1.getBytes());
+                out.write(rpta2.getBytes());
             }
                 
 
