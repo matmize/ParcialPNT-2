@@ -151,8 +151,8 @@ public class Unico{
 
     }
 
-    public void crearAsignacion ( int idProyecto, String idEmpleado,String responsabilidades){
-        Asignacion asignacion = new Asignacion (idProyecto,idEmpleado,responsabilidades);
+    public void crearAsignacion ( int idProy, String idemp,String responsabilidades){
+        Asignacion asignacion = new Asignacion (idProy,idemp,responsabilidades);
         asignaciones.add(asignacion);
     }
 
@@ -192,11 +192,11 @@ public class Unico{
         }
     }
 
-    public void editarAsignacion (int idProy,String idEmpleado1,String responsabilidades1){
+    public void editarAsignacion (int idProy,String idemp1,String responsabilidades1){
         for (int i = 0; i<asignaciones.size();i++){
             if (idProy == asignaciones.get(i).getIdProy()){
                 Asignacion copia = asignaciones.get(i);
-                copia.setIdemp(idEmpleado1);
+                copia.setIdemp(idemp1);
                 copia.setResponsabilidades(responsabilidades1);
   
             }
