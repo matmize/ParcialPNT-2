@@ -243,7 +243,7 @@ public class Unico{
         }
     }
 
-    public void editarAsignacion (int codigoR, int codigoP1, String descripcion1, String actividades1, String tiempoR1){
+    public void editarRequerimiento (int codigoR, int codigoP1, String descripcion1, String actividades1, String tiempoR1){
          for (int i = 0; i<requerimientos.size();i++){
             if (codigoR == requerimientos.get(i).getCodigoR()){
                 Requerimiento copia = requerimientos.get(i);
