@@ -34,10 +34,11 @@ public class eliminarProyecto extends HttpServlet {
             if (unico.buscarRequerimiento(codigo1).getCodigoR() != -100){
                 unico.eliminarProyecto(codigo);
                 unico.eliminarRequerimiento(codigo1);
-                out = resp.getOutputStream();
-                out.write(rpta1.getBytes());
+                
 
             }
+            out = resp.getOutputStream();
+            out.write(rpta1.getBytes());
         }else{
             out = resp.getOutputStream();
             out.write(rpta.getBytes());
