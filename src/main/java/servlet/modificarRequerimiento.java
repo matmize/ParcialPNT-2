@@ -14,7 +14,7 @@ import java.lang.Math;
     urlPatterns = {"/modificarP"}
 )
 
-public class modificarProyecto extends HttpServlet {
+public class modificarRequerimiento extends HttpServlet {
     @Override
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
