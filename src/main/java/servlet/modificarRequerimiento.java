@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.Math;
 
 @WebServlet(
-    name = "modificarProyecto",
-    urlPatterns = {"/modificarP"}
+    name = "modificarRequerimiento",
+    urlPatterns = {"/modificarR"}
 )
 
 public class modificarRequerimiento extends HttpServlet {
