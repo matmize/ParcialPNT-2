@@ -30,8 +30,8 @@ public class modificarRequerimiento extends HttpServlet {
         String tiempoR1 = req.getParameter("tiempoR1");
         ServletOutputStream out;
 
-        String rpta = "No existe un producto con el codigo " + idProyecto;
-        String rpta1 = "Se ha editado el producto con el codigo" + idProyecto;
+        String rpta = "No existe un producto con el codigo " + codigoR;
+        String rpta1 = "Se ha editado el producto con el codigo" + codigoR;
         ServletOutputStream out;
 
 
