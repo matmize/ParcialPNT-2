@@ -33,7 +33,7 @@ public class crearRequerimiento extends HttpServlet {
         String rpta2 = "No Existe un un Proyecto con codigo " + codigoP + "  Por lo cual no se puede crear la asignacion ";
 
         if (unico.buscarRequerimiento(codigoR).getCodigoR() == -100){
-            if (unico.buscarProyecto(codigoP).getIdProyecto() == -100){
+            if (unico.buscarProyecto(codigoP).getIdProyecto() != -100){
                 unico.crearRequerimiento(codigoR,codigoP,descripcion,actividades, tiempoR);
                 out = resp.getOutputStream();
                 out.write(rpta1.getBytes());
