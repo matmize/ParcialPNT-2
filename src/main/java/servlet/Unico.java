@@ -233,7 +233,7 @@ public class Unico{
         }
 
     }
-    public void eliminarRequerimiento (int codigoR, int codigoP, String descripcion, String actividades, String tiempoR){
+    public void eliminarRequerimiento (int codigoR){
          for (int i =0; i< requerimientos.size();i++){
             if (requerimientos.get(i).getCodigoR() == codigoR){
                 requerimientos.remove(i);

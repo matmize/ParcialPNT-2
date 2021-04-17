@@ -29,7 +29,7 @@ public class eliminarRequerimiento extends HttpServlet {
 
         ServletOutputStream out;
 
-        if (unico.buscarProyecto(codigo).getCodigoR() != -100){
+        if (unico.buscarRequerimiento(codigo).getCodigoR() != -100){
             unico.eliminarRequerimiento(codigo);
             out = resp.getOutputStream();
             out.write(rpta1.getBytes());
