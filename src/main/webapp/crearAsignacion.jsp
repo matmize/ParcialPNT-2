@@ -12,13 +12,13 @@
    <%
         Unico unico = Unico.getInstance();
 
-        String idEmpleado = request.getParameter("idEmpleado");
+        
         int idProyecto = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
-        int horas = Math.abs(Integer.parseInt(request.getParameter("horas")));
+        String idEmpleado = request.getParameter("idEmpleado");
         String responsabilidades = request.getParameter("responsabilidades");
         
-        if (unico.buscarAsignacion(idProyecto).idProy == -100){
-            unico.crearAsignacion(idEmpleado,idProyecto,horas,responsabilidades);
+        if (unico.buscarAsignacion(idProyecto).getIdProy() == -100){
+            unico.crearAsignacion(idProyecto,idEmpleado,responsabilidades);
             
         }else{%>
             <p>Ya Existe una asignacion con el id <%= Integer.parseInt(request.getParameter("idProyecto"))%></p>

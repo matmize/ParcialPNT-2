@@ -12,15 +12,15 @@
    <%
         Unico unico = Unico.getInstance();
 
-        String idEmpleado = request.getParameter("idEmpleado");
+        
         int idProyecto = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
-        int horas = Math.abs(Integer.parseInt(request.getParameter("horas")));
-        String responsabilidades = request.getParameter("responsabilidades");
+        String idEmpleado1 = request.getParameter("idEmpleado1");
+        String responsabilidades1 = request.getParameter("responsabilidades1");
         
 
-        if (unico.buscarAsignacion(idProyecto).idProy == -100){
+        if (unico.buscarAsignacion(idProyecto).getIdProyecto() == -100){
            
-            unico.editarAsignacion(idEmpleado,idProyecto,horas,responsabilidades);
+            unico.editarAsignacion(idProyecto,idEmpleado1,responsabilidades1);
 
         }
     

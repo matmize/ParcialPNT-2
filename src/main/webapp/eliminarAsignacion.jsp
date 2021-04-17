@@ -15,9 +15,9 @@
     
     <%
         Unico unico = Unico.getInstance();
-        int id = Math.abs(Integer.parseInt(request.getParameter("id")));
+        int id = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
 
-        if (unico.buscarAsignacion(id).idProy != -100){
+        if (unico.buscarAsignacion(id).getIdProy() != -100){
             unico.eliminarAsignacion(id); %>
 
             <p>Se elimino correctamente la Asignacion</p>
