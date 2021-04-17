@@ -1,0 +1,37 @@
+body{
+	background: aqua ;
+}
+h1{
+    color:purple;
+    position: relative;
+    left: 500px;
+}
+h3{
+    color:red;
+    position: relative;
+    left: 450px;
+}
+form{
+	position :relative;
+	top :450px;
+	left :255px;
+}
+h1 {
+    position:relative;
+    left:430px;
+
+}
+img {
+    position :relative;
+    left: 250px;
+	
+}
+div.section{
+    position: center;
+	height:30px;
+	width :150px;
+	border :3px solid black;
+	margin : 7px;
+    float:left;
+    left: 250px;
+}
