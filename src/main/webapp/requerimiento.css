@@ -1,6 +1,11 @@
 body{
-    background-image: url("https://cdn.pixabay.com/photo/2018/06/23/09/33/businessman-3492380__340.jpg");
-     background-color: white;
+  
+     background-image: url("https://cdn.pixabay.com/photo/2018/06/23/09/33/businessman-3492380__340.jpg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     width: 100%;
+     height: 100%;
     }
     h1{
         color:purple;

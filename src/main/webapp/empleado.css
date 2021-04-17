@@ -1,6 +1,10 @@
 body{
     background-image: url("https://cdn.pixabay.com/photo/2018/05/09/22/40/career-3386334_960_720.jpg");
-     background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     }
     h1{
         color:purple;
