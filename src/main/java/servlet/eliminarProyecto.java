@@ -22,6 +22,7 @@ public class eliminarProyecto extends HttpServlet {
         Unico unico = Unico.getInstance();
 
         int codigo = Integer.parseInt(req.getParameter("idProyecto"));
+        int codigo1 = Integer.parseInt(req.getParameter("codigoR"));
         
 
         String rpta = " No existe un producto con el codigo " + codigo;
@@ -30,12 +31,13 @@ public class eliminarProyecto extends HttpServlet {
         ServletOutputStream out;
 
         if (unico.buscarProyecto(codigo).getIdProyecto() != -100){
-            unico.eliminarProyecto(codigo);
-            out = resp.getOutputStream();
-            out.write(rpta1.getBytes());
+            if (unico.buscarRequerimiento(codigo1).getCodigoR() != -100){
+                unico.eliminarProyecto(codigo);
+                unico.eliminarRequerimiento(codigo1);
+                out = resp.getOutputStream();
+                out.write(rpta1.getBytes());
 
-            
-
+            }
         }else{
             out = resp.getOutputStream();
             out.write(rpta.getBytes());
