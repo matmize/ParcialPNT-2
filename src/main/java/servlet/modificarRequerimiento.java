@@ -32,7 +32,7 @@ public class modificarRequerimiento extends HttpServlet {
 
         String rpta = "No existe un producto con el codigo " + codigoR;
         String rpta1 = "Se ha editado el producto con el codigo" + codigoR;
-        ServletOutputStream out;
+      
 
 
         if (unico.buscarRequerimiento(codigoR).getCodigoR() != -100){

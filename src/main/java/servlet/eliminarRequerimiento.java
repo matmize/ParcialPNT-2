@@ -21,16 +21,16 @@ public class eliminarRequerimiento extends HttpServlet {
 
         Unico unico = Unico.getInstance();
 
-        int codigoR = Integer.parseInt(req.getParameter("codigoR"));
+        int codigo = Integer.parseInt(req.getParameter("codigoR"));
         
 
-        String rpta = " No existe un producto con el codigo " + codigoR;
-        String rpta1 = " Se ha eliminado el producto con el codigo " + codigoR;
+        String rpta = " No existe un producto con el codigo " + codigo;
+        String rpta1 = " Se ha eliminado el producto con el codigo " + codigo;
 
         ServletOutputStream out;
 
-        if (unico.buscarRequerimiento(codigoR).getCodigoR() != -100){
-            unico.eliminarRequerimiento(codigoR);
+        if (unico.buscarRequerimiento(codigo).getCodigoR() != -100){
+            unico.eliminarRequerimiento(codigo);
             out = resp.getOutputStream();
             out.write(rpta1.getBytes());
 
