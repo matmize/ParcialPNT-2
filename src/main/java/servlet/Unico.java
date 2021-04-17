@@ -73,7 +73,7 @@ public class Unico{
                                     }
                                 }
                             }
-                            asignaciones.get(j).idemp = nemp;
+                            asignaciones.get(j).getIdemp() = nemp;
                             j++;
                      }else {
                         	if (Integer.parseInt(emp[0])== idEmpleado){
@@ -192,9 +192,9 @@ public class Unico{
         }
     }
 
-    public void editarAsignacion (int idProyecto,String idEmpleado1,String responsabilidades1){
+    public void editarAsignacion (int idProy,String idEmpleado1,String responsabilidades1){
         for (int i = 0; i<asignaciones.size();i++){
-            if (idProyecto == asignaciones.get(i).getIdProyecto()){
+            if (idProy == asignaciones.get(i).getIdProy()){
                 Asignacion copia = asignaciones.get(i);
                 copia.setIdemp(idEmpleado1);
                 copia.setResponsabilidades(responsabilidades1);
