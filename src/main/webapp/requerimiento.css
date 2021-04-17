@@ -27,7 +27,7 @@ img {
 	
 }
 div.section{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     margin-top: -50px;
