@@ -16,6 +16,7 @@ body{
         position :relative;
         top :450px;
         left :255px;
+        color: white;
     }
     h1 {
         position:relative;
@@ -36,9 +37,7 @@ body{
         float:left;
         left: 250px;
     }
-    .amp-wp-header a {
-        color:white;
-    }
+    
     a{
         color:white;
     }

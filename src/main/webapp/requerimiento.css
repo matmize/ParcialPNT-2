@@ -1,5 +1,5 @@
 body{
-    background-image: url("https://media.istockphoto.com/photos/standard-quality-control-certification-assurance-concept-picture-id1282633951?s=612x612");
+    background-image: url("https://cdn.pixabay.com/photo/2018/06/23/09/33/businessman-3492380__340.jpg");
      background-color: white;
     }
     h1{
@@ -29,7 +29,7 @@ body{
     }
     div.section{
         position: relative;
-        height:20px;
+        height:36px;
         width :150px;
         border :3px solid white;
         margin : 7px;
