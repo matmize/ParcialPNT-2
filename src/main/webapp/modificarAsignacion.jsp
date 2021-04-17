@@ -18,7 +18,7 @@
         String responsabilidades1 = request.getParameter("responsabilidades1");
         
 
-        if (unico.buscarAsignacion(idProyecto).getIdProyecto() == -100){
+        if (unico.buscarAsignacion(idProyecto).getIdProy() == -100){
            
             unico.editarAsignacion(idProyecto,idEmpleado1,responsabilidades1);
 
