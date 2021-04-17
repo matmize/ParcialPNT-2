@@ -151,8 +151,8 @@ public class Unico{
 
     }
 
-    public void crearAsignacion ( String idEmpleado, int idProyecto,int horas,String responsabilidades){
-        Asignacion asignacion = new Asignacion (idEmpleado,idProyecto,horas,responsabilidades);
+    public void crearAsignacion ( int idProyecto, String idEmpleado,String responsabilidades){
+        Asignacion asignacion = new Asignacion (idProyecto,idEmpleado,responsabilidades);
         asignaciones.add(asignacion);
     }
 
@@ -162,7 +162,7 @@ public class Unico{
             int locate = 0;
 
             for (int i = 0; i < asignaciones.size();i++){
-                if (idProyecto == asignaciones.get(i).idProy){
+                if (idProyecto == asignaciones.get(i).getIdProy()){
                     count++;
                     locate = i;
                 }
@@ -172,32 +172,33 @@ public class Unico{
             }else{
 
 
-                Asignacion asignacion = new Asignacion ("",-100,0,"-");
+                Asignacion asignacion = new Asignacion (-100,0,"-");
                 return asignacion;
             }
         }else{
-           Asignacion asignacion = new Asignacion ("",-100,0,"-");
+           Asignacion asignacion = new Asignacion (-100,0,"-");
             return asignacion;
         }
 
     }
 
-    public void eliminarAsignacion (String idEmpleado, int idProyecto,int horas,String responsabilidades){
+    public void eliminarAsignacion ( int idProyecto){
          for (int i =0; i< asignaciones.size();i++){
-            if (asignaciones.get(i).idProy == idProyecto){
+            if (asignaciones.get(i).getIdProy() == idProyecto){
                 asignaciones.remove(i);
             } else{
-                Asignacion asignacion = new Asignacion ("",-100,0,"-");
+                Asignacion asignacion = new Asignacion (-100,0,"-");
             }
         }
     }
 
-    public void editarAsignacion (String idEmpleado, int idProyecto,int horas,String responsabilidades){
-        for (int i =0; i<asignaciones.size();i++){
-            if (idProyecto == asignaciones.get(i).idProy){
-                asignaciones.get(i).idemp = idEmpleado;
-                asignaciones.get(i).horas = horas;
-                asignaciones.get(i).responsabilidades = responsabilidades;
+    public void editarAsignacion (int idProyecto,String idEmpleado1,String responsabilidades1){
+        for (int i = 0; i<asignaciones.size();i++){
+            if (idProyecto == asignaciones.get(i).getIdProyecto()){
+                Asignacion copia = asignaciones.get(i);
+                copia.setIdemp(idEmpleado1);
+                copia.setResponsabilidades(responsabilidades1);
+  
             }
         }
 

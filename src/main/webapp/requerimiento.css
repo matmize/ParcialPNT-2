@@ -27,13 +27,11 @@ img {
 	
 }
 div.section{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border :3px solid black;
-    margin : 7px;
+    position: center;
+	height:36px;
+	width :150px;
+	border :3px solid black;
+	margin : 7px;
     float:left;
+    left: 250px;
 }
-

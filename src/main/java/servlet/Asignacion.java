@@ -1,15 +1,13 @@
 package servlet;
 
 public class Asignacion {
-	public String idemp;
-	public int idProy;
-	public int horas;
-	public String responsabilidades;
+	private int idProy;
+    private int idemp;
+	private String responsabilidades;
 
-	public Asignacion(String idEmpleado, int idProyecto,int horas,String responsabilidades){
-		this.idemp = idEmpleado;
+	public Asignacion( int idProy,int idemp, String responsabilidades){
 		this.idProy= idProyecto;
-		this.horas = horas;
+        this.idemp = idEmpleado;
 		this.responsabilidades = responsabilidades;
 	}
 
@@ -30,13 +28,6 @@ public class Asignacion {
         this.idProy = idProy;
     }
 
-    public int getHoras() {
-        return horas;
-    }
-
-    public void setHoras(int horas) {
-        this.horas = horas;
-    }
 
     public String getResponsabilidades() {
         return responsabilidades;
