@@ -48,3 +48,4 @@ public class eliminarRequerimiento extends HttpServlet {
         out.close();
 
     }
+}

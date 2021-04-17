@@ -29,14 +29,14 @@ public class leerRequerimiento extends HttpServlet {
         String rpta = "NO existe un producto con el codigo " + codigo;
         String rpta1 = "";
 
-        if (unico.buscarRequerimiento(codigo).getCodigoR()) == -100){
+        if (unico.buscarRequerimiento(codigo).getCodigoR() == -100){
             ServletOutputStream out = resp.getOutputStream();
             out.write(rpta.getBytes());
 
             out.flush();
             out.close();
 
-        }else{
+        }else  {
 
             
             rpta1 = "Codigo del Requerimiento: " + unico.buscarRequerimiento(codigo).getCodigoR() +
