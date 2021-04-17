@@ -1,8 +1,8 @@
 package servlet;
 
 public class Asignacion {
-	private String idProy;
-    private int idemp;
+	private int idProy;
+    private String idemp;
 	private String responsabilidades;
 
 	public Asignacion( int idProy,String idemp, String responsabilidades){
