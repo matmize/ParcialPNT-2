@@ -61,7 +61,7 @@ public class Unico{
                 if (asignaciones.size()>0){
                     int j = 0;
                     while (j<asignaciones.size()){
-                        String [] emp = asignaciones.get(j).getIdemp().split(",");
+                        String [] emp = asignaciones.get(j).idemp.split(",");
                         if (emp.length>1){
                             String nemp ="";
                             for (int k = 0; k<emp.length;k++){
@@ -73,7 +73,7 @@ public class Unico{
                                     }
                                 }
                             }
-                            asignaciones.get(j).getIdemp() = nemp;
+                            asignaciones.get(j).idemp = nemp;
                             j++;
                      }else {
                         	if (Integer.parseInt(emp[0])== idEmpleado){

@@ -2,7 +2,7 @@ package servlet;
 
 public class Asignacion {
 	private int idProy;
-    private String idemp;
+    public String idemp;
 	private String responsabilidades;
 
 	public Asignacion( int idProy,String idemp, String responsabilidades){
