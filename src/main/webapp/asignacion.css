@@ -18,9 +18,8 @@ body{
         left: 450px;
     }
     form{
-        position :relative;
-        top :450px;
-        left :255px;
+        position :center;
+
         color: white;
     }
     h1 {
