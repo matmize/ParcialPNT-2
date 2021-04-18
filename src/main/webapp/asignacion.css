@@ -34,7 +34,7 @@ body{
         
     }
     div.section{
-        position: relative;
+        position: center;
         height:20px;
         width :150px;
         border :3px solid white;
