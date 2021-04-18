@@ -8,7 +8,7 @@ body{
   
     }
     h1{
-        color:purple;
+        color:red;
         position: center center;
     }
     h3{
@@ -34,13 +34,12 @@ body{
         
     }
     div.section{
-        position: relative;
-        height:20px;
-        width :150px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+
         border :3px solid white;
-        margin : 7px;
-        float:left;
-        left: 250px;
     }
     
     a{
