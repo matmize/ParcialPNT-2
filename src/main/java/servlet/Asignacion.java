@@ -3,9 +3,9 @@ package servlet;
 public class Asignacion {
 	private int idProy;
     public String idemp;
-	private String responsabilidades;
+	private int requerimientos;
 
-	public Asignacion( int idProy,String idemp, String responsabilidades){
+	public Asignacion( int idProy,String idemp, int requerimientos){
 		this.idProy= idProy;
         this.idemp = idemp;
 		this.responsabilidades = responsabilidades;
@@ -29,12 +29,12 @@ public class Asignacion {
     }
 
 
-    public String getResponsabilidades() {
-        return responsabilidades;
+    public int getRequerimientos() {
+        return requerimientos;
     }
 
-    public void setResponsabilidades(String responsabilidades) {
-        this.responsabilidades = responsabilidades;
+    public void setRequerimientos(int requerimientos) {
+        this.requerimientos = requerimientos;
     }
 	
 }

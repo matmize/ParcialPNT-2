@@ -15,10 +15,10 @@
         
         int idProyecto = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
         String idEmpleado = request.getParameter("idEmpleado");
-        String responsabilidades = request.getParameter("responsabilidades");
+        int requerimiento = Math.abs(Integer.parseInt(request.getParameter("requerimiento")));
         
         if (unico.buscarAsignacion(idProyecto).getIdProy() == -100){
-            unico.crearAsignacion(idProyecto,idEmpleado,responsabilidades);
+            unico.crearAsignacion(idProyecto,idEmpleado,requerimiento);
             
         }else{%>
             <p>Ya Existe una asignacion con el id <%= Integer.parseInt(request.getParameter("idProyecto"))%></p>

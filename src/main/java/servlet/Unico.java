@@ -151,8 +151,8 @@ public class Unico{
 
     }
 
-    public void crearAsignacion ( int idProy, String idemp,String responsabilidades){
-        Asignacion asignacion = new Asignacion (idProy,idemp,responsabilidades);
+    public void crearAsignacion ( int idProy, String idemp,int requerimientos){
+        Asignacion asignacion = new Asignacion (idProy,idemp,requerimientos);
         asignaciones.add(asignacion);
     }
 
@@ -172,11 +172,11 @@ public class Unico{
             }else{
 
 
-                Asignacion asignacion = new Asignacion (-100,"-","-");
+                Asignacion asignacion = new Asignacion (-100,"-",0);
                 return asignacion;
             }
         }else{
-           Asignacion asignacion = new Asignacion (-100,"-","-");
+           Asignacion asignacion = new Asignacion (-100,"-",0);
             return asignacion;
         }
 
@@ -187,17 +187,17 @@ public class Unico{
             if (asignaciones.get(i).getIdProy() == idProyecto){
                 asignaciones.remove(i);
             } else{
-                Asignacion asignacion = new Asignacion (-100,"-","-");
+                Asignacion asignacion = new Asignacion (-100,"-",0);
             }
         }
     }
 
-    public void editarAsignacion (int idProy,String idemp1,String responsabilidades1){
+    public void editarAsignacion (int idProy,String idemp1,int requerimientos1){
         for (int i = 0; i<asignaciones.size();i++){
             if (idProy == asignaciones.get(i).getIdProy()){
                 Asignacion copia = asignaciones.get(i);
                 copia.setIdemp(idemp1);
-                copia.setResponsabilidades(responsabilidades1);
+                copia.setRequerimientos(requerimientos1);
   
             }
         }

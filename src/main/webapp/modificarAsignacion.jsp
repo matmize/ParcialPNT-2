@@ -15,12 +15,12 @@
         
         int idProy = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
         String idemp1 = request.getParameter("idEmpleado1");
-        String responsabilidades1 = request.getParameter("responsabilidades1");
+        int requerimiento1 = Math.abs(Integer.parseInt(request.getParameter("requerimiento1")));
         
 
         if (unico.buscarAsignacion(idProy).getIdProy() == -100){
            
-            unico.editarAsignacion(idProy,idemp1,responsabilidades1);
+            unico.editarAsignacion(idProy,idemp1,requerimiento1);
 
         }
     
