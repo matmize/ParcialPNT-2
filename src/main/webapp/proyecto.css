@@ -17,9 +17,10 @@ body{
         left: 450px;
     }
     form{
-        position :relative;
-        top :450px;
-        left :255px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
     }
     h1 {
         position:relative;
