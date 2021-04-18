@@ -17,7 +17,10 @@ body{
         left: 450px;
     }
     form{
-        position :center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
         color: white;
     }
     h1 {
