@@ -135,7 +135,8 @@ public class Unico{
                         asignaciones.remove(j);
                         proyectos.remove(i);
                     }else {
-                        proyectos.remove(i);
+                        Asignacion asignacion = new Asignacion (-100,"-",0)
+                        return asignacion;
                     }
                 }
             }else{

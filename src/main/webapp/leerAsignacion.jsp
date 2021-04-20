@@ -21,9 +21,9 @@
                 <Table>
                 
                     
-                    <tr><td><Strong>ID Asignacion : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).getIdProy()%> </Strong></td>
+                    <tr><td><Strong>ID Proyecto : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).getIdProy()%> </Strong></td>
                     <tr><td><Strong>ID Empleado : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).idemp%> </Strong></td>
-                    <tr><td><Strong>Responsabilidades : </Strong></td><tr><td><Strong><%= unico.buscarAsignacion(id).getRequerimientos()%> </Strong></td>
+                    <tr><td><Strong>Requerimiento : </Strong></td><tr><td><Strong><%= unico.buscarAsignacion(id).getRequerimientos()%> </Strong></td>
                     
 
 
