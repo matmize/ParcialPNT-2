@@ -141,7 +141,7 @@ public class Unico{
 
 
     }
-    proyectos.remove(i);
+  
     public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
          for (int i = 0; i<proyectos.size();i++){
             if (idProyecto == proyectos.get(i).getIdProyecto()){
