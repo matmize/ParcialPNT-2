@@ -130,12 +130,18 @@ public class Unico{
     public void eliminarProyecto (int idProyecto){
         for (int i =0; i< proyectos.size();i++){
             if (proyectos.get(i).getIdProyecto() == idProyecto){
-                proyectos.remove(i);
+                for (int j =0 ; j<asignaciones.size();i++){
+                    if (asignaciones.get(j).getIdProy() == idProyecto){
+                        proyectos.remove(i);
+                        asignaciones.remove(j);
+                    }
+                }
             } 
         }
 
 
     }
+    proyectos.remove(i);
     public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
          for (int i = 0; i<proyectos.size();i++){
             if (idProyecto == proyectos.get(i).getIdProyecto()){
