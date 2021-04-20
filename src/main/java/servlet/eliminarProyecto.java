@@ -29,11 +29,21 @@ public class eliminarProyecto extends HttpServlet {
         String rpta1 = " Se ha eliminado el producto con el codigo " + codigo + 
         "  Y el requerimiento con Codigo " + codigo1;
         String rpta2 = " el Codigo del Requerimiento  " +codigo1 +"  no coincide con el codigo del Proyecto " + codigo;
+        String rpta3 = "Se ha eliminado el proyecto con codigo " + codigo + "  Se ha eliminado el requerimiento con codigo " + codigo1 + " se ha eliminado la asignacion la cual estaba asociada al proyecto con codigo : " +codigo;
 
         ServletOutputStream out;
 
         if (unico.buscarProyecto(codigo).getIdProyecto() != -100){
             if (unico.buscarRequerimiento(codigo1).getCodigoR() != -100){
+                if (unico.buscarAsignacion(codigo).getidProy() != -100){
+                    unico.eliminarProyecto(codigo);
+                    unico.eliminarRequerimiento(codigo1);
+                    unico.eliminarAsignacion(codigo);
+
+                    out = resp.getOutputStream();
+                    out.write(rpta3.getBytes());
+
+                }
                 unico.eliminarProyecto(codigo);
                 unico.eliminarRequerimiento(codigo1);
 
@@ -60,3 +70,4 @@ public class eliminarProyecto extends HttpServlet {
 
 
 }
+
