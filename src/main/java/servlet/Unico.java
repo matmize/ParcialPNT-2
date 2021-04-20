@@ -130,7 +130,7 @@ public class Unico{
     public void eliminarProyecto (int idProyecto){
         for (int i =0; i< proyectos.size();i++){
             if (proyectos.get(i).getIdProyecto() == idProyecto){
-                for (int j =0 j<asignaciones.size();j++){
+                for (int j =0 ; j<asignaciones.size();j++){
                     if (asignaciones.get(j).getIdProyecto() == idProyecto){
                         asignaciones.remove(j);
                         proyectos.remove(i);
