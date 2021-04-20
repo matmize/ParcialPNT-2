@@ -11,7 +11,7 @@ public class Unico{
     private ArrayList<Requerimiento>requerimientos= new ArrayList<Requerimiento>();
     private ArrayList<Empleado>empleados = new ArrayList();
     private ArrayList<Proyecto>proyectos = new ArrayList();
-    private ArrayList<Asignacion>asignaciones = new ArrayList();
+    public ArrayList<Asignacion>asignaciones = new ArrayList();
 	
 	public Unico(){
 		
@@ -130,14 +130,22 @@ public class Unico{
     public void eliminarProyecto (int idProyecto){
         for (int i =0; i< proyectos.size();i++){
             if (proyectos.get(i).getIdProyecto() == idProyecto){
-                proyectos.remove(i);
-            } else{
+                for (int j =0 j<asignaciones.size();j++){
+                    if (asignaciones.get(j).getIdProyecto() == idProyecto){
+                        asignaciones.remove(j);
+                        proyectos.remove(i);
+                    }else {
+                        proyectos.remove(i);
+                    }
+                }
+            }else{
                 Proyecto proyecto = new Proyecto (-100,"-",0,"-");
             }
         }
 
-
     }
+
+  
     public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
          for (int i = 0; i<proyectos.size();i++){
             if (idProyecto == proyectos.get(i).getIdProyecto()){
