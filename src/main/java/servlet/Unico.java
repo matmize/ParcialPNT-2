@@ -135,13 +135,13 @@ public class Unico{
                         asignaciones.remove(j);
                         proyectos.remove(i);
                     }else {
-                        Asignacion asignacion = new Asignacion (-100,"-",0)
+                        
+                        Asignacion asignacion = new Asignacion (-100,"-",0);
                         return asignacion;
                     }
                 }
-            }else{
-                Proyecto proyecto = new Proyecto (-100,"-",0,"-");
-            }
+                proyectos.remove(i);
+            } 
         }
 
     }
