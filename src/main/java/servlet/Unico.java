@@ -137,8 +137,8 @@ public class Unico{
                     }else {
                         
                         Asignacion asignacion = new Asignacion (-100,"-",0);
-                        return asignacion;
-                    }
+                        
+                    }return asignacion;
                 }
                 proyectos.remove(i);
             } 
