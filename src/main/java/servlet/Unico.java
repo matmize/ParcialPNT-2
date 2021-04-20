@@ -134,11 +134,7 @@ public class Unico{
                     if (asignaciones.get(j).getIdProy() == idProyecto){
                         asignaciones.remove(j);
                         proyectos.remove(i);
-                    }else {
-                        
-                        Asignacion asignacion = new Asignacion (-100,"-",0);
-                        
-                    }return asignacion;
+                    }
                 }
                 proyectos.remove(i);
             } 
