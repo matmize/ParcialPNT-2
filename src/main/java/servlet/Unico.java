@@ -130,20 +130,12 @@ public class Unico{
     public void eliminarProyecto (int idProyecto){
         for (int i =0; i< proyectos.size();i++){
             if (proyectos.get(i).getIdProyecto() == idProyecto){
-                for (int j =0 ; j<asignaciones.size();j++){
-                    if (asignaciones.get(j).getIdProy() == idProyecto){
-                        asignaciones.remove(j);
-                        proyectos.remove(i);
-                    }else {
-                        proyectos.remove(i);
-                    }
-                }
-            }
+                proyectos.remove(i);
+            } 
         }
 
-    }
 
-  
+    }
     public void editarProyecto (int idProyecto, String nombreC1,int presupuesto1,String tiempo1){
          for (int i = 0; i<proyectos.size();i++){
             if (idProyecto == proyectos.get(i).getIdProyecto()){
@@ -192,9 +184,7 @@ public class Unico{
          for (int i =0; i< asignaciones.size();i++){
             if (asignaciones.get(i).getIdProy() == idProyecto){
                 asignaciones.remove(i);
-            } else{
-                Asignacion asignacion = new Asignacion (-100,"-",0);
-            }
+            } 
         }
     }
 
@@ -244,9 +234,7 @@ public class Unico{
          for (int i =0; i< requerimientos.size();i++){
             if (requerimientos.get(i).getCodigoR() == codigoR){
                 requerimientos.remove(i);
-            } else{
-                Requerimiento requerimiento= new Requerimiento (-100,0,"-","-","-");
-            }
+            } 
         }
     }
 
