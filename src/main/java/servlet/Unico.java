@@ -128,10 +128,11 @@ public class Unico{
     }
 
     public void eliminarProyecto (int idProyecto){
-        for (int i =0; i< proyectos.size();i++){
-            if (proyectos.get(i).getIdProyecto() == idProyecto){
+        while (int i < proyectos.size()){
+            if (idProyecto == proyectos.get(i).getIdProyecto() && idProyecto == asignaciones.get(i).getIdProy()){
                 proyectos.remove(i);
-            } 
+                asignaciones.remove(i);
+            }
         }
 
 
