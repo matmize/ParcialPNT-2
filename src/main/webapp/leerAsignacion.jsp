@@ -22,7 +22,7 @@
                 
                     
                     <tr><td><Strong>ID Proyecto : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).getIdProy()%> </Strong></td>
-                    <tr><td><Strong>ID Empleado : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).getIdemp%> </Strong></td>
+                    <tr><td><Strong>ID Empleado : </Strong></td> <tr><td><Strong><%= unico.buscarAsignacion(id).getIdemp()%> </Strong></td>
                     <tr><td><Strong>Requerimiento : </Strong></td><tr><td><Strong><%= unico.buscarAsignacion(id).getRequerimientos()%> </Strong></td>
                     
 

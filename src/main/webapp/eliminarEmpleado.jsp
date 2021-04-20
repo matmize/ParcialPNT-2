@@ -22,23 +22,11 @@
 
    
         if (unico.buscarEmpleado(id).getIdEmpleado() != -100) {
-            for (int i = 0; i< asignaciones.size();i++ ){
-                if (unico.buscarAsignacion(id).getIdEmpleado() != -100){
-                    unico.eliminarEmpleado(id);%>
-                    unico.eliminarAsignacion(id);%>
-
-                    <p>Se elimino correctamente el empleado y la Asignacion a la cual pertenecia</p>
-
-                <%}else{%>
-                    unico.eliminarEmpleado(id);%>
-                    <p>Se elimino correctamente el empleado</p>
-                <%}
-            }
+           unico.eliminarEmpleado(id); %>
             
-            
-           
-
-            
+    
+            <p>Se elimino correctamente el Empleado</p>
+             
         <%}else{%>
 
             <p>No existe el empleado con ID <%= Math.abs(Integer.parseInt(request.getParameter("id")))%></p>
