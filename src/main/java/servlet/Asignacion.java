@@ -2,21 +2,21 @@ package servlet;
 
 public class Asignacion {
 	private int idProy;
-    public String idemp;
+    private int idemp;
 	private int requerimientos;
 
-	public Asignacion( int idProy,String idemp, int requerimientos){
+	public Asignacion( int idProy,int idemp, int requerimientos){
 		this.idProy= idProy;
         this.idemp = idemp;
 		this.requerimientos = requerimientos;
 	}
 
 
-    public String getIdemp() {
+    public int getIdemp() {
         return idemp;
     }
 
-    public void setIdemp(String idemp) {
+    public void setIdemp(int idemp) {
         this.idemp = idemp;
     }
 

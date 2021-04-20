@@ -55,36 +55,17 @@ public class Unico{
     }
 
     public void eliminarEmpleado(int idEmpleado){
-        for (int i =0; i< empleados.size();i++){
-            if (empleados.get(i).getIdEmpleado() == idEmpleado){
-                empleados.remove(i);
-                if (asignaciones.size()>0){
-                    int j = 0;
-                    while (j<asignaciones.size()){
-                        String [] emp = asignaciones.get(j).idemp.split(",");
-                        if (emp.length>1){
-                            String nemp ="";
-                            for (int k = 0; k<emp.length;k++){
-                                if (Integer.parseInt(emp[k])!= idEmpleado){
-                                    if (k== emp.length-1){
-                                        nemp = nemp+emp[k];
-                                    }else{
-                                        nemp = nemp + emp[k]+",";
-                                    }
-                                }
-                            }
-                            asignaciones.get(j).idemp = nemp;
-                            j++;
-                     }else {
-                        	if (Integer.parseInt(emp[0])== idEmpleado){
-                            	asignaciones.remove(j);
-                            	j=0;
-                            }
-                        }
+         for (int i =0; i< empleados.size();i++){
+            if (empleados.get(i).getIdEmpleado()== idEmpleado){
+                for (int j =0 ; j<asignaciones.size();i++){
+                    if (asignaciones.get(j).getIdemp() == idEmpleado){
+                        empleados.remove(i);
+                        asignaciones.remove(j);
                     }
                 }
-            }
+            } 
         }
+
     }
 
     public void editarEmpleado(int idEmpleado,int cc1, String nombre1,String formacionAca1, String habilidades1){
@@ -155,7 +136,7 @@ public class Unico{
 
     }
 
-    public void crearAsignacion ( int idProy, String idemp,int requerimientos){
+    public void crearAsignacion ( int idProy, int idemp,int requerimientos){
         Asignacion asignacion = new Asignacion (idProy,idemp,requerimientos);
         asignaciones.add(asignacion);
     }
@@ -176,11 +157,11 @@ public class Unico{
             }else{
 
 
-                Asignacion asignacion = new Asignacion (-100,"-",0);
+                Asignacion asignacion = new Asignacion (-100,-100,0);
                 return asignacion;
             }
         }else{
-           Asignacion asignacion = new Asignacion (-100,"-",0);
+           Asignacion asignacion = new Asignacion (-100,-100,0);
             return asignacion;
         }
 
@@ -194,7 +175,7 @@ public class Unico{
         }
     }
 
-    public void editarAsignacion (int idProy,String idemp1,int requerimientos1){
+    public void editarAsignacion (int idProy,int idemp1,int requerimientos1){
         for (int i = 0; i<asignaciones.size();i++){
             if (idProy == asignaciones.get(i).getIdProy()){
                 Asignacion copia = asignaciones.get(i);
