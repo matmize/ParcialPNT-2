@@ -35,7 +35,7 @@ public class eliminarProyecto extends HttpServlet {
 
         if (unico.buscarProyecto(codigo).getIdProyecto() != -100){
             if (unico.buscarRequerimiento(codigo1).getCodigoR() != -100){
-                if (unico.buscarAsignacion(codigo).getidProy() != -100){
+                if (unico.buscarAsignacion(codigo1).getidProy() != -100){
                     unico.eliminarProyecto(codigo);
                     unico.eliminarRequerimiento(codigo1);
                     unico.eliminarAsignacion(codigo);
