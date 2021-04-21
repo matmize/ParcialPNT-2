@@ -1,6 +1,6 @@
 <html>
 <head>
-	
+	<link rel="stylesheet" href="empleado.css" type="text/css">
 </head>
 
 <body>

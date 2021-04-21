@@ -1,6 +1,6 @@
 <html>
 <head>
-	
+	<link rel="stylesheet" href="asignacion.css" type="text/css">
 </head>
 
 <body>

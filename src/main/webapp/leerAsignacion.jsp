@@ -2,6 +2,7 @@
     <head>
         <h1>Leer Asignacion</h1>
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <link rel="stylesheet" href="asignacion.css" type="text/css">
     </head>
     
     <body>

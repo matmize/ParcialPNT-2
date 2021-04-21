@@ -3,6 +3,7 @@
     <head>
         <h1>Leer Empleado</h1>
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <link rel="stylesheet" href="empleado.css" type="text/css">
     </head>
     
     <body>
