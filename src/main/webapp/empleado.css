@@ -42,6 +42,9 @@ body{
         float:left;
         left: 250px;
     }
+    p{
+        color:white;
+    }
     .amp-wp-header a {
         color:white;
     }

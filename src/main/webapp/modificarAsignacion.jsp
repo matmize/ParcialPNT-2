@@ -14,7 +14,7 @@
 
         
         int idProy = Math.abs(Integer.parseInt(request.getParameter("idProyecto")));
-        String idemp1 = request.getParameter("idEmpleado1");
+        int idemp1 = Math.abs(Integer.parseInt(request.getParameter("idEmpleadp1")));
         int requerimiento1 = Math.abs(Integer.parseInt(request.getParameter("requerimiento1")));
         
 
