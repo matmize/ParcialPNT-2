@@ -30,5 +30,6 @@
     %>
 
     <a href = "eliminarAsignacion.html"><button  type="button">Volver</button></a><a href = "index.html"><button type = "button" >Menu</button></a>
+    <a href = "asignacion.html"><button type = "button" >CRUD Asignacion</button></a>
 </body>
 </html>
