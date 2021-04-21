@@ -18,7 +18,7 @@
         int requerimiento1 = Math.abs(Integer.parseInt(request.getParameter("requerimiento1")));
         
 
-        if (unico.buscarAsignacion(idProy).getIdProy() == -100){
+        if (unico.buscarAsignacion(idProy).getIdProy() != -100){
            
             unico.editarAsignacion(idProy,idemp1,requerimiento1);
 
