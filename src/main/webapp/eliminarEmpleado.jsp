@@ -7,6 +7,7 @@
 <head>
     <title>Eliminar Empleado</title>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="empleado.css" type="text/css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
            unico.eliminarEmpleado(id); %>
             
     
-            <p>Se elimino correctamente el Empleado</p>
+            <p>Se elimino correctamente el Empleado y a la asignacion a la cual pertenecia</p>
              
         <%}else{%>
 
